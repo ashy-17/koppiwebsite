@@ -1,0 +1,342 @@
+:root {
+    --primary-color: #6F4E37; /* Coffee brown */
+    --secondary-color: #C4A484; /* Latte color */
+    --accent-color: #E3B04B; /* Gold accent */
+    --light-color: #F9F5F0; /* Cream */
+    --dark-color: #2D2424; /* Dark brown */
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://source.unsplash.com/1920x1080/?coffee-shop,barista') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.login-container {
+    background: rgba(249, 245, 240, 0.95);
+    padding: 2.5rem;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: all 0.3s ease;
+}
+
+.login-container:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.logo p {
+    color: var(--dark-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+h3 {
+    color: var(--dark-color);
+    text-align: center;
+    margin-bottom: 1.8rem;
+    font-weight: 600;
+    position: relative;
+}
+
+h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 0.5rem auto 0;
+}
+/* Fixed Password Field Styles */
+.form-floating {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-floating>.form-control {
+    height: calc(3.5rem + 2px);
+    padding: 1rem 3rem; /* Changed to equal padding on both sides */
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(111, 78, 55, 0.3);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+.form-floating>.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(111, 78, 55, 0.25);
+    border-color: var(--primary-color);
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    z-index: 4;
+    pointer-events: none;
+    font-size: 1rem;
+}
+/* Special adjustment for lock icon */
+#password ~ .input-icon {
+    top: calc(50% + 1px); /* Slight vertical adjustment for perfect centering */
+}
+
+/* Label positioning */
+.form-floating>label {
+    position: absolute;
+    top: 1rem;
+    left: 3rem;
+    height: auto;
+    padding: 0;
+    pointer-events: none;
+    border: none;
+    transform-origin: 0 0;
+    transition: all 0.2s ease-in-out;
+    color: rgba(111, 78, 55, 0.6);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Focus states */
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label {
+    transform: scale(0.85) translateY(-1.5rem) translateX(-1.5rem);
+    opacity: 1;
+    background-color: rgba(249, 245, 240, 0.9);
+    padding: 0 0.5rem;
+    color: var(--primary-color);
+}
+
+.form-floating>.form-control:-webkit-autofill~label {
+    transform: scale(0.85) translateY(-1.5rem) translateX(-1.5rem);
+    opacity: 1;
+    background-color: rgba(249, 245, 240, 0.9);
+    padding: 0 0.5rem;
+    color: var(--primary-color);
+}
+.btn-login {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+
+.btn-login:hover {
+    background-color: var(--dark-color);
+    transform: translateY(-2px);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+.additional-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.forgot-password a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.forgot-password a:hover {
+    color: var(--dark-color);
+    text-decoration: underline;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: var(--dark-color);
+    opacity: 0.6;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgba(111, 78, 55, 0.3);
+}
+
+.divider::before {
+    margin-right: 1rem;
+}
+
+.divider::after {
+    margin-left: 1rem;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+}
+
+.facebook {
+    background: #3b5998;
+}
+
+.google {
+    background: #db4437;
+}
+
+.twitter {
+    background: #1da1f2;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.signup-link a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.signup-link a:hover {
+    color: var(--dark-color);
+    text-decoration: underline;
+}
+
+#message {
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 576px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.login-container {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Additional signup-specific styles */
+.password-strength {
+    height: 4px;
+    background: #e0e0e0;
+    margin: 8px 0 0 3rem;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.password-strength-bar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s, background 0.3s;
+}
+
+.password-hints {
+    font-size: 0.75rem;
+    color: var(--dark-color);
+    opacity: 0.7;
+    margin-top: 0.25rem;
+    padding-left: 3rem;
+}
+
+.password-hints ul {
+    padding-left: 1rem;
+    margin-bottom: 0;
+}
+
+.password-hints .valid {
+    color: var(--accent-color);
+}
+
+.form-check {
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+}
+
+.form-check-input {
+    margin-right: 0.5rem;
+    border: 1px solid rgba(111, 78, 55, 0.3);
+}
+
+.form-check-label {
+    font-size: 0.85rem;
+}
+
+.form-check-label a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.form-check-label a:hover {
+    color: var(--dark-color);
+    text-decoration: underline;
+}
+

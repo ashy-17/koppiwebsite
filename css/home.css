@@ -1,0 +1,345 @@
+  /* Homepage-specific styles */
+  .hero {
+    background: linear-gradient(rgba(45, 36, 36, 0.7), rgba(45, 36, 36, 0.7)), 
+                url('https://source.unsplash.com/1920x1080/?coffee-beans') no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--light-color);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.btn-hero {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.feature-section {
+    padding: 5rem 0;
+    background-color: var(--light-color);
+}
+
+.feature-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+:root {
+    --primary-color: #6F4E37;
+    --secondary-color: #C4A484;
+    --accent-color: #E3B04B;
+    --light-color: #F9F5F0;
+    --dark-color: #2D2424;
+}
+
+/* Enhanced Header Styles */
+.navbar {
+    background: rgba(45, 36, 36, 0.98) !important;
+    padding: 1rem 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(227, 176, 75, 0.15);
+}
+
+.navbar.scrolled {
+    padding: 0.75rem 0;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    color: var(--accent-color) !important;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: translateY(-1px);
+}
+
+.navbar-brand .coffee-icon {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    color: var(--light-color) !important;
+    margin: 0 0.75rem;
+    padding: 0.5rem 0 !important;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+    opacity: 1;
+}
+
+/* Enhanced Profile Dropdown */
+.profile-dropdown .btn {
+    display: flex;
+    align-items: center;
+    background: rgba(227, 176, 75, 0.1);
+    color: var(--light-color);
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.profile-dropdown .btn:hover {
+    background: rgba(227, 176, 75, 0.2);
+    transform: translateY(-1px);
+}
+
+.profile-dropdown .user-icon {
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+}
+
+.profile-dropdown .user-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.profile-dropdown .dropdown-menu {
+    background-color: var(--dark-color);
+    border: 1px solid rgba(227, 176, 75, 0.15);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    margin-top: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.profile-dropdown .dropdown-item {
+    color: var(--light-color);
+    padding: 0.5rem 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.profile-dropdown .dropdown-item i {
+    width: 1.25rem;
+    margin-right: 0.75rem;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.profile-dropdown .dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: white;
+    padding-left: 1.75rem;
+}
+
+.profile-dropdown .dropdown-divider {
+    border-color: rgba(227, 176, 75, 0.1);
+    margin: 0.5rem 0;
+}
+
+/* Mobile Menu Styling */
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+    color: var(--accent-color);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px rgba(227, 176, 75, 0.3);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28227, 176, 75, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.25em;
+    height: 1.25em;
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background: rgba(45, 36, 36, 0.98);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-link {
+        margin: 0.5rem 0;
+        padding: 0.75rem 1rem !important;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .profile-dropdown {
+        margin-top: 1rem;
+    }
+
+    .profile-dropdown .btn {
+        justify-content: center;
+        width: 100%;
+    }
+}
+.menu-section {
+    background: linear-gradient(rgba(249, 245, 240, 0.9), rgba(249, 245, 240, 0.9)), 
+                url('https://source.unsplash.com/1920x1080/?coffee-texture') no-repeat center center;
+    background-size: cover;
+    padding: 5rem 0;
+}
+
+.menu-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    margin-bottom: 2rem;
+}
+
+.menu-card:hover {
+    transform: scale(1.03);
+}
+
+.menu-img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.price-tag {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 3rem 0;
+}
+
+.social-links a {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Profile dropdown styles */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.profile-btn:hover {
+    color: var(--accent-color);
+}
+
+.dropdown-menu {
+    background-color: var(--dark-color);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.dropdown-item {
+    color: var(--light-color);
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: white;
+}

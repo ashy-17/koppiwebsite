@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew & Bean - About Our Coffee Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-coffee me-2"></i>Brew & Bean
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="profile-dropdown">
+                            <button class="profile-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-circle"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="profile.html"><i class="fas fa-user me-2"></i>Profile</a></li>
+                                <li><a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Our Coffee Story</h1>
+            <p>Discover the passion behind every cup we serve at Brew & Bean</p>
+            <a href="#our-story" class="btn btn-primary">Explore More</a>
+        </div>
+    </section>
+
+       <!-- Our Story - Updated Section -->
+       <section id="our-story" class="py-5">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" style="transform: translateY(30px);">Our Story</h2>
+            <div class="about-content">
+                <div class="about-image animate-on-scroll" style="transform: translateY(30px);">
+                    <img src="images/out.jpg" alt="Our first coffee shop">
+                </div>
+                <div class="about-text animate-on-scroll" style="transform: translateY(30px);">
+                    <p>Founded in 2015, Brew & Bean began as a small coffee cart in Rizal.Laguna. Our founder, Princess Cristal, had a simple vision: to serve exceptional coffee that tells a story.</p>
+                    <p>What started as a passion project quickly grew into a beloved local spot, known for our carefully sourced beans and artisanal brewing methods. Today, we continue to honor our roots while innovating for the future of coffee.</p>
+                    <p>Every cup we serve reflects our commitment to quality, sustainability, and the craft of coffee making. We partner directly with farmers who share our values, ensuring fair trade and environmentally responsible practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Values -->
+    <section class="values">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" style="transform: translateY(30px);">Our Values</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4 animate-on-scroll" style="transform: translateY(30px);">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Sustainability</h3>
+                        <p>We're committed to environmentally friendly practices, from sourcing to serving. Our coffee is 100% sustainably grown and ethically sourced.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 animate-on-scroll" style="transform: translateY(30px); transition-delay: 0.2s;">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Quality</h3>
+                        <p>Every bean is carefully selected and roasted to perfection. We never compromise on quality, ensuring each cup meets our high standards.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 animate-on-scroll" style="transform: translateY(30px); transition-delay: 0.4s;">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Community</h3>
+                        <p>We believe coffee brings people together. Our shops are designed to be welcoming spaces where connections are made and ideas are shared.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" style="transform: translateY(30px);">Meet Our Team</h2>
+            <div class="row">
+                <div class="col-md-4 animate-on-scroll" style="transform: translateY(30px);">
+                    <div class="team-member">
+                        <img src="images/1.jpg" alt="Princess Cristal" class="team-img">
+                        <h3>Princess Cristal</h3>
+                        <p>Founder & Head Roaster</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate-on-scroll" style="transform: translateY(30px); transition-delay: 0.2s;">
+                    <div class="team-member">
+                        <img src="images/barista.jpg" alt="Sarah Johnson" class="team-img">
+                        <h3>Sarah Johnson</h3>
+                        <p>Head Barista</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate-on-scroll" style="transform: translateY(30px); transition-delay: 0.4s;">
+                    <div class="team-member">
+                        <img src="images/chef.jpg" alt="Michael Chen" class="team-img">
+                        <h3>Michael Chen</h3>
+                        <p>Pastry Chef</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Brew & Bean</div>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Home</a>
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Menu</a>
+                <a href="#" class="footer-link">Contact</a>
+                <a href="#" class="footer-link">Privacy Policy</a>
+            </div>
+            <div class="social-links mb-4">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Brew & Bean Coffee Co. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/about.js"> </script>
+</body>
+</html>

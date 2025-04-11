@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew & Bean - Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <h1>Brew & Bean</h1>
+            <p>Join our coffee community</p>
+        </div>
+        
+        <h3>Create Your Account</h3>
+        
+        <div id="message" class="alert d-none" role="alert"></div>
+        
+        <form id="signupForm">
+            <div class="form-floating mb-3 position-relative">
+                <i class="fas fa-user input-icon"></i>
+                <input type="text" class="form-control" id="fullName" placeholder="Full Name" required>
+                <label for="fullName">Full Name</label>
+            </div>
+            
+            <div class="form-floating mb-3 position-relative">
+                <i class="fas fa-envelope input-icon"></i>
+                <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                <label for="email">Email Address</label>
+            </div>
+            <div class="form-floating mb-3 position-relative">
+                <i class="fas fa-lock input-icon"></i>
+                <input type="password" class="form-control" id="password" placeholder=" " required>
+                <label for="password">Password</label>
+                <div class="password-strength">
+                    <div class="password-strength-bar" id="passwordStrength"></div>
+                </div>
+                <div class="password-hints" id="passwordHints">
+                    <ul>
+                        <li id="lengthHint">At least 8 characters</li>
+                        <li id="numberHint">Contains a number</li>
+                        <li id="specialHint">Contains a special character</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="form-floating mb-3 position-relative">
+                <i class="fas fa-lock input-icon"></i>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+                <label for="confirmPassword">Confirm Password</label>
+            </div>
+            
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="terms" required>
+                <label class="form-check-label" for="terms">
+                    I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>
+                </label>
+            </div>
+            
+            <button type="submit" class="btn btn-login">
+                <i class="fas fa-user-plus me-2"></i>Sign Up
+            </button>
+            
+            <div class="divider">or sign up with</div>
+            
+            <div class="social-login">
+                <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn google"><i class="fab fa-google"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            
+            <div class="signup-link">
+                Already have an account? <a href="index.html">Log in</a>
+            </div>
+        </form>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/signup.js">
+    </script>
+</body>
+</html>

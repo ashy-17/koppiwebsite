@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew & Bean - Our Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-coffee me-2"></i>Brew & Bean
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="btn btn-action position-relative" id="cartButton">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">
+                                0
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Hero Section -->
+    <section class="menu-hero">
+        <div class="container">
+            <h1>Our Coffee Menu</h1>
+            <p class="lead">Discover our handcrafted beverages made with premium ingredients</p>
+        </div>
+    </section>
+
+    <!-- Search and Categories -->
+    <div class="container">
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-bar" placeholder="Search for your favorite drink...">
+        </div>
+
+        <ul class="nav nav-pills category-tabs" id="menuCategories">
+            <li class="nav-item">
+                <a class="nav-link active" href="#" data-category="all">All Items</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-category="coffee">Coffee</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-category="espresso">Espresso</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-category="tea">Tea</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-category="pastry">Pastries</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Menu Items -->
+    <section class="menu-section">
+        <div class="container">
+            <div class="row" id="menuItems">
+                <!-- Coffee Items -->
+                <div class="col-md-6 col-lg-4 mb-4" data-category="coffee">
+                    <div class="menu-card">
+                        <img src="images/single.jpg" alt="Pour Over Coffee" class="menu-img" data-bs-toggle="modal" data-bs-target="#productModal" data-id="1" data-title="Single Origin Pour Over" data-price="150" data-img="https://source.unsplash.com/600x400/?pour-over-coffee" data-desc="Handcrafted with our premium single-origin beans, highlighting unique regional flavors. Each cup is carefully brewed to bring out the subtle notes of fruit, chocolate, or nuts depending on the origin.">
+                        <div class="menu-content">
+                            <h3 class="menu-title" data-bs-toggle="modal" data-bs-target="#productModal" data-id="1">Single Origin Pour Over</h3>
+                            <p class="menu-description">Handcrafted with our premium single-origin beans, highlighting unique regional flavors</p>
+                            <div class="menu-footer">
+                                <span class="price-tag">₱150</span>
+                                <div class="d-flex align-items-center">
+                                    <div class="quantity-selector">
+                                        <button class="quantity-btn minus" data-id="1">-</button>
+                                        <input type="text" class="quantity-input" value="1" data-id="1" readonly>
+                                        <button class="quantity-btn plus" data-id="1">+</button>
+                                    </div>
+                                    <button class="btn-action add-to-cart" data-id="1">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4" data-category="coffee">
+                    <div class="menu-card">
+                        <img src="images/nitro.jpg" alt="Cold Brew" class="menu-img" data-bs-toggle="modal" data-bs-target="#productModal" data-id="2" data-title="Nitro Cold Brew" data-price="180" data-img="https://source.unsplash.com/600x400/?cold-brew-coffee" data-desc="Our nitro cold brew is infused with nitrogen for a creamy, velvety texture without any added dairy. Brewed for 18 hours with our special cold brew blend, served ice cold with a beautiful cascading effect.">
+                        <div class="menu-content">
+                            <h3 class="menu-title" data-bs-toggle="modal" data-bs-target="#productModal" data-id="2">Nitro Cold Brew</h3>
+                            <p class="menu-description">Smooth cold brew infused with nitrogen for a creamy, velvety texture</p>
+                            <div class="menu-footer">
+                                <span class="price-tag">₱180</span>
+                                <div class="d-flex align-items-center">
+                                    <div class="quantity-selector">
+                                        <button class="quantity-btn minus" data-id="2">-</button>
+                                        <input type="text" class="quantity-input" value="1" data-id="2" readonly>
+                                        <button class="quantity-btn plus" data-id="2">+</button>
+                                    </div>
+                                    <button class="btn-action add-to-cart" data-id="2">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Espresso Items -->
+                <div class="col-md-6 col-lg-4 mb-4" data-category="espresso">
+                    <div class="menu-card">
+                        <img src="images/Espresso-Single.jpg" alt="Espresso" class="menu-img" data-bs-toggle="modal" data-bs-target="#productModal" data-id="3" data-title="Single Shot Espresso" data-price="120" data-img="https://source.unsplash.com/600x400/?espresso" data-desc="A concentrated form of coffee served in small, strong shots. Our signature espresso blend creates a rich crema with notes of dark chocolate and caramel. Perfect for those who appreciate coffee in its purest form.">
+                        <div class="menu-content">
+                            <h3 class="menu-title" data-bs-toggle="modal" data-bs-target="#productModal" data-id="3">Single Shot Espresso</h3>
+                            <p class="menu-description">Rich and intense, made with our signature espresso blend</p>
+                            <div class="menu-footer">
+                                <span class="price-tag">₱120</span>
+                                <div class="d-flex align-items-center">
+                                    <div class="quantity-selector">
+                                        <button class="quantity-btn minus" data-id="3">-</button>
+                                        <input type="text" class="quantity-input" value="1" data-id="3" readonly>
+                                        <button class="quantity-btn plus" data-id="3">+</button>
+                                    </div>
+                                    <button class="btn-action add-to-cart" data-id="3">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4" data-category="espresso">
+                    <div class="menu-card">
+                        <img src="images/honey.jpg" alt="Cappuccino" class="menu-img" data-bs-toggle="modal" data-bs-target="#productModal" data-id="4" data-title="Honey Cinnamon Cappuccino" data-price="160" data-img="https://source.unsplash.com/600x400/?cappuccino" data-desc="A perfect balance of espresso, steamed milk, and foam with our house-made honey cinnamon syrup. The sweetness of honey complements the spice of cinnamon, creating a comforting and aromatic drink.">
+                        <div class="menu-content">
+                            <h3 class="menu-title" data-bs-toggle="modal" data-bs-target="#productModal" data-id="4">Honey Cinnamon Cappuccino</h3>
+                            <p class="menu-description">Perfectly balanced with house-made honey cinnamon syrup</p>
+                            <div class="menu-footer">
+                                <span class="price-tag">₱160</span>
+                                <div class="d-flex align-items-center">
+                                    <div class="quantity-selector">
+                                        <button class="quantity-btn minus" data-id="4">-</button>
+                                        <input type="text" class="quantity-input" value="1" data-id="4" readonly>
+                                        <button class="quantity-btn plus" data-id="4">+</button>
+                                    </div>
+                                    <button class="btn-action add-to-cart" data-id="4">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tea Items -->
+                <div class="col-md-6 col-lg-4 mb-4" data-category="tea">
+                    <div class="menu-card">
+                        <img src="images/matcha.webp" alt="Matcha Latte" class="menu-img" data-bs-toggle="modal" data-bs-target="#productModal" data-id="5" data-title="Ceremonial Matcha Latte" data-price="170" data-img="https://source.unsplash.com/600x400/?matcha" data-desc="Made with premium Japanese ceremonial grade matcha powder, whisked to perfection and combined with steamed milk. Our matcha is sourced directly from Uji, Japan, known for producing the highest quality matcha with a naturally sweet and umami-rich flavor profile.">
+                        <div class="menu-content">
+                            <h3 class="menu-title" data-bs-toggle="modal" data-bs-target="#productModal" data-id="5">Ceremonial Matcha Latte</h3>
+                            <p class="menu-description">Premium Japanese matcha whisked to perfection with steamed milk</p>
+                            <div class="menu-footer">
+                                <span class="price-tag">₱170</span>
+                                <div class="d-flex align-items-center">
+                                    <div class="quantity-selector">
+                                        <button class="quantity-btn minus" data-id="5">-</button>
+                                        <input type="text" class="quantity-input" value="1" data-id="5" readonly>
+                                        <button class="quantity-btn plus" data-id="5">+</button>
+                                    </div>
+                                    <button class="btn-action add-to-cart" data-id="5">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pastry Items -->
+                <div class="col-md-6 col-lg-4 mb-4" data-category="pastry">
+                    <div class="menu-card">
+                        <img src="images/butter.jpg" alt="Croissant" class="menu-img" data-bs-toggle="modal" data-bs-target="#productModal" data-id="6" data-title="Butter Croissant" data-price="90" data-img="https://source.unsplash.com/600x400/?croissant" data-desc="Our classic French-style croissant made with pure butter and baked fresh throughout the day. The dough is laminated with layers of butter, creating a flaky, golden exterior with a soft, buttery interior. Perfect with any coffee drink.">
+                        <div class="menu-content">
+                            <h3 class="menu-title" data-bs-toggle="modal" data-bs-target="#productModal" data-id="6">Butter Croissant</h3>
+                            <p class="menu-description">Flaky, buttery layers baked fresh daily</p>
+                            <div class="menu-footer">
+                                <span class="price-tag">₱90</span>
+                                <div class="d-flex align-items-center">
+                                    <div class="quantity-selector">
+                                        <button class="quantity-btn minus" data-id="6">-</button>
+                                        <input type="text" class="quantity-input" value="1" data-id="6" readonly>
+                                        <button class="quantity-btn plus" data-id="6">+</button>
+                                    </div>
+                                    <button class="btn-action add-to-cart" data-id="6">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Items -->
+                <div class="col-md-6 col-lg-4 mb-4" data-category="coffee">
+                    <div class="menu-card">
+                        <img src="images/flat.jpg" alt="Flat White" class="menu-img" data-bs-toggle="modal" data-bs-target="#productModal" data-id="7" data-title="Flat White" data-price="160" data-img="https://source.unsplash.com/600x400/?flat-white" data-desc="A smooth blend of microfoam poured over a double shot of espresso. The velvety microfoam is the key to this Australian favorite, creating a creamy texture that allows the espresso to shine through.">
+                        <div class="menu-content">
+                            <h3 class="menu-title" data-bs-toggle="modal" data-bs-target="#productModal" data-id="7">Flat White</h3>
+                            <p class="menu-description">Smooth microfoam over a double shot of espresso</p>
+                            <div class="menu-footer">
+                                <span class="price-tag">₱160</span>
+                                <div class="d-flex align-items-center">
+                                    <div class="quantity-selector">
+                                        <button class="quantity-btn minus" data-id="7">-</button>
+                                        <input type="text" class="quantity-input" value="1" data-id="7" readonly>
+                                        <button class="quantity-btn plus" data-id="7">+</button>
+                                    </div>
+                                    <button class="btn-action add-to-cart" data-id="7">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4" data-category="tea">
+                    <div class="menu-card">
+                        <img src="images/chai.jpg" alt="Chai Latte" class="menu-img" data-bs-toggle="modal" data-bs-target="#productModal" data-id="8" data-title="Spiced Chai Latte" data-price="150" data-img="https://source.unsplash.com/600x400/?chai-tea" data-desc="Our house-made chai blend combines black tea with cinnamon, cardamom, ginger, cloves, and black pepper. Steamed milk creates a creamy latte that's both spicy and sweet. Can be made with dairy or plant-based milk.">
+                        <div class="menu-content">
+                            <h3 class="menu-title" data-bs-toggle="modal" data-bs-target="#productModal" data-id="8">Spiced Chai Latte</h3>
+                            <p class="menu-description">Aromatic blend of black tea and spices with steamed milk</p>
+                            <div class="menu-footer">
+                                <span class="price-tag">₱150</span>
+                                <div class="d-flex align-items-center">
+                                    <div class="quantity-selector">
+                                        <button class="quantity-btn minus" data-id="8">-</button>
+                                        <input type="text" class="quantity-input" value="1" data-id="8" readonly>
+                                        <button class="quantity-btn plus" data-id="8">+</button>
+                                    </div>
+                                    <button class="btn-action add-to-cart" data-id="8">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4" data-category="pastry">
+                    <div class="menu-card">
+                        <img src="images/cake.webp" alt="Chocolate Cake" class="menu-img" data-bs-toggle="modal" data-bs-target="#productModal" data-id="9" data-title="Flourless Chocolate Cake" data-price="120" data-img="https://source.unsplash.com/600x400/?chocolate-cake" data-desc="A rich, dense chocolate cake made with premium dark chocolate and almond flour. Gluten-free yet decadent, with a velvety texture that pairs perfectly with coffee. Served with a dusting of cocoa powder and fresh berries.">
+                        <div class="menu-content">
+                            <h3 class="menu-title" data-bs-toggle="modal" data-bs-target="#productModal" data-id="9">Flourless Chocolate Cake</h3>
+                            <p class="menu-description">Rich, dense chocolate cake with almond flour</p>
+                            <div class="menu-footer">
+                                <span class="price-tag">₱120</span>
+                                <div class="d-flex align-items-center">
+                                    <div class="quantity-selector">
+                                        <button class="quantity-btn minus" data-id="9">-</button>
+                                        <input type="text" class="quantity-input" value="1" data-id="9" readonly>
+                                        <button class="quantity-btn plus" data-id="9">+</button>
+                                    </div>
+                                    <button class="btn-action add-to-cart" data-id="9">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2023 Brew & Bean. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h4>Your Order</h4>
+            <button class="btn-close" id="closeCart"></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+            <div class="text-center py-4" id="emptyCartMessage">
+                <i class="fas fa-coffee fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                <p>Your cart is empty</p>
+                <p class="small">Add some delicious items to get started</p>
+            </div>
+        </div>
+        <div class="cart-total d-none" id="cartTotal">
+            Total: ₱<span id="totalAmount">0</span>
+        </div>
+        <button class="btn btn-primary checkout-btn d-none" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Product Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-4">
+                    <img src="" class="product-modal-img mb-3" id="modalProductImg" alt="">
+                    <h3 class="product-modal-title" id="modalProductTitle"></h3>
+                    <div class="product-modal-price mb-3" id="modalProductPrice"></div>
+                    <p class="product-modal-description" id="modalProductDescription"></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus" id="modalMinus">-</button>
+                            <input type="text" class="quantity-input" value="1" id="modalQuantity" readonly>
+                            <button class="quantity-btn plus" id="modalPlus">+</button>
+                        </div>
+                        <button class="btn-action" id="modalAddToCart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <div class="d-flex align-items-center">
+            <i class="fas fa-check-circle me-2"></i>
+            <span id="notificationMessage">Item added to cart</span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/menu.js">
+    </script>
+</body>
+</html>
